@@ -51,6 +51,19 @@ export function Navbar(): JSX.Element {
         <div className="page-x h-16 flex items-center justify-between">
           <Logo />
 
+          {/* Desktop Navigation Links */}
+          <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
+            {LINKS.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="text-sm font-medium text-fg hover:text-primary transition-colors duration-200"
+              >
+                {label}
+              </a>
+            ))}
+          </nav>
+
           {/* Right actions */}
           <div className="flex items-center gap-1">
             <span className="hidden sm:inline text-sm font-medium mr-2 cursor-pointer hover:text-primary transition-colors duration-200 select-none">
@@ -79,13 +92,14 @@ export function Navbar(): JSX.Element {
               </span>
             </button>
 
+            {/* Mobile Menu Button - Hidden on Desktop (md:hidden) */}
             <button
               type="button"
               onClick={() => setOpen(true)}
               aria-label="Open navigation menu"
               aria-expanded={open}
               aria-controls="nav-drawer"
-              className="p-2 ml-1 rounded hover:bg-surface hover:text-primary transition-colors duration-200"
+              className="p-2 ml-1 rounded hover:bg-surface hover:text-primary transition-colors duration-200 md:hidden"
             >
               <Menu size={21} strokeWidth={1.75} />
             </button>
@@ -93,23 +107,23 @@ export function Navbar(): JSX.Element {
         </div>
       </header>
 
-      {/* ── Backdrop ──────────────────────────────────────── */}
+      {/* ── Backdrop (Mobile Only) ─────────────────────────── */}
       <div
-        className={`fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 ${
+        className={`fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 md:hidden ${
           open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={close}
         aria-hidden="true"
       />
 
-      {/* ── Right-side navigation drawer ──────────────────── */}
+      {/* ── Right-side navigation drawer (Mobile Only) ──────── */}
       <nav
         id="nav-drawer"
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
         className={`fixed top-0 right-0 h-full w-72 sm:w-80 bg-white z-50 flex flex-col shadow-2xl
-          transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]
+          transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden
           ${open ? 'translate-x-0' : 'translate-x-full'}`}
       >
         {/* Drawer header */}

@@ -17,7 +17,7 @@ export function PromoBanner({
     >
       {/* Background overflow display text */}
       <span
-        className="absolute left-0 top-1/2 -translate-y-1/2 font-display font-black text-white opacity-[0.12] select-none leading-none pointer-events-none whitespace-nowrap z-0"
+        className="absolute left-0 top-1/2 -translate-y-1/2 font-sans font-black text-white opacity-[0.12] select-none leading-none pointer-events-none whitespace-nowrap z-0"
         style={{ fontSize: 'clamp(70px, 12vw, 160px)' }}
         aria-hidden="true"
       >

@@ -5,9 +5,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans:    ['Inter', 'sans-serif'],
-        display: ['Barlow Condensed', 'sans-serif'],
-      },
+  sans:    ['Pogonia', 'sans-serif'],   
+  display: ['Chuner', 'sans-serif'],    
+},
       colors: {
         primary: {
           DEFAULT: '#e53935',
