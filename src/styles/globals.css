@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base reset ──────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scroll behaviour ────────────────────────── */
+html { scroll-behavior: smooth; }
+
+/* ── Focus ring (global override) ───────────── */
+:focus-visible {
+  outline: 2px solid #e53935;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── Max-width container helper ─────────────── */
+@layer utilities {
+  .page-x {
+    @apply mx-auto px-6 lg:px-16 max-w-screen-2xl;
+  }
+}

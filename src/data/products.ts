@@ -1,0 +1,65 @@
+import type { Product } from '../types';
+
+export const products: Product[] = [
+  {
+    id:       'p1',
+    name:     'Beats Pro Studio',
+    price:    995,
+    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Beats+Pro',
+    category: 'headphones',
+  },
+  {
+    id:       'p2',
+    name:     'Rocky Mountain ANC',
+    price:    8250,
+    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Rocky+Mountain',
+    category: 'headphones',
+  },
+  {
+    id:       'p3',
+    name:     'Game Console Controller',
+    price:    8250,
+    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Controller',
+    category: 'gaming',
+  },
+  {
+    id:        'p4',
+    name:      'White Elitebook Tablet 80',
+    price:     7950,
+    salePrice: 9950,
+    image:     'https://placehold.co/280x260/f8f8f8/333333?text=Tablet+80',
+    category:  'devices',
+    isSale:    true,
+  },
+  {
+    id:       'p5',
+    name:     'Dare Wear C7',
+    price:    499,
+    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Dare+Wear',
+    category: 'wearables',
+  },
+  {
+    id:       'p6',
+    name:     'Wireless Audio Multiroom 380',
+    price:    8250,
+    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Multiroom+380',
+    category: 'speakers',
+  },
+  {
+    id:        'p7',
+    name:      'Beats Elite Wireless',
+    price:     7450,
+    salePrice: 9950,
+    image:     'https://placehold.co/280x260/f8f8f8/333333?text=Beats+Elite',
+    category:  'headphones',
+    isSale:    true,
+  },
+  {
+    id:       'p8',
+    name:     'Smartwatch 2GTi WH',
+    price:    499,
+    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Smartwatch+2GTi',
+    category: 'wearables',
+    isNew:    true,
+  },
+];
