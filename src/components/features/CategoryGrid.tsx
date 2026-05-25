@@ -1,20 +1,19 @@
 import { useState } from 'react';
-import {
-  Headphones, Watch, Laptop2, Gamepad2, Eye, Volume2,
-  type LucideIcon,
-} from 'lucide-react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { categories }      from '../../data/categories';
 import type { Category }    from '../../types';
 
-const ICONS: Record<string, LucideIcon> = {
-  earphone: Headphones,
-  wearable: Watch,
-  devices:  Laptop2,
-  gaming:   Gamepad2,
-  oculus:   Eye,
-  speaker:  Volume2,
+// 1. Updated image mapping with your asset paths
+const IMAGES: Record<string, string> = {
+  earphone: '/assets/images/categories/Headphones.png',
+  wearable: '/assets/images/categories/Watches.png',
+  devices:  '/assets/images/categories/Laptop.png',
+  gaming:   '/assets/images/categories/Console.png',
+  oculus:   '/assets/images/categories/VR.png',
+  speaker:  '/assets/images/categories/JBL.png',
 };
+
+const FALLBACK_IMAGE = '/assets/images/banners/Hero-img.png';
 
 /* ── Browse button — local hover state ─────── */
 function BrowseButton({ text, bg }: { text: string; bg: string }): JSX.Element {
@@ -31,8 +30,8 @@ function BrowseButton({ text, bg }: { text: string; bg: string }): JSX.Element {
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      onFocus={()       => setHovered(true)}
-      onBlur={()        => setHovered(false)}
+      onFocus={       () => setHovered(true)}
+      onBlur={        () => setHovered(false)}
     >
       Browse
     </button>
@@ -43,7 +42,7 @@ function BrowseButton({ text, bg }: { text: string; bg: string }): JSX.Element {
 function CategoryCard({
   id, label, name, bg, text, index, visible,
 }: Category & { index: number; visible: boolean }): JSX.Element {
-  const Icon = ICONS[id] ?? Headphones;
+  const imageSrc = IMAGES[id] ?? FALLBACK_IMAGE;
 
   return (
     <article
@@ -67,7 +66,7 @@ function CategoryCard({
             {label}
           </p>
           <h3
-            className="font-display font-bold leading-none text-3xl"
+            className="font-sans font-bold leading-none text-3xl"
             style={{ color: text }}
           >
             {name}
@@ -76,12 +75,16 @@ function CategoryCard({
         <BrowseButton text={text} bg={bg} />
       </div>
 
-      {/* Decorative icon — bottom-right */}
+      {/* Decorative image — Opacity classes removed, scale effect preserved */}
       <div
-        className="absolute right-5 bottom-5 opacity-15 group-hover:opacity-25 group-hover:scale-110 transition-all duration-400 pointer-events-none"
+        className="absolute right-2 bottom-2 w-32 h-32 group-hover:scale-110 transition-all duration-400 pointer-events-none"
         aria-hidden="true"
       >
-        <Icon size={80} strokeWidth={1} style={{ color: text }} />
+        <img 
+          src={imageSrc} 
+          alt="" 
+          className="w-full h-full object-contain object-bottom-right"
+        />
       </div>
     </article>
   );

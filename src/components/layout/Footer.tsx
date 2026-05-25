@@ -69,7 +69,7 @@ export function Footer() {
 
         {/* Col 2 — Quick Links */}
         <div>
-          <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wider">
+          <h3 className="text-sm font-sans font-bold text-white mb-5 uppercase tracking-wider">
             Quick Links
           </h3>
           <ul className="flex flex-col gap-3 list-none">
@@ -85,7 +85,7 @@ export function Footer() {
 
         {/* Col 3 — Contact */}
         <div>
-          <h3 className="text-sm font-semibold text-white mb-5 uppercase tracking-wider">
+          <h3 className="text-sm font-sans font-bold text-white mb-5 uppercase tracking-wider">
             Contact
           </h3>
           <address className="not-italic flex flex-col gap-3 text-sm text-white/50">
@@ -99,7 +99,7 @@ export function Footer() {
 
         {/* Col 4 — Newsletter */}
         <div>
-          <h3 className="text-xs font-semibold text-white/60 uppercase tracking-wider mb-2">
+          <h3 className="text-xs font-sans font-bold text-white/60 uppercase tracking-wider mb-2">
             Subscribe To Our Email
           </h3>
           <p className="text-2xl font-bold text-white mb-5 leading-tight">

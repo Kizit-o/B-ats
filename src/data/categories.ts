@@ -40,7 +40,7 @@ export const categories: Category[] = [
   {
     id:    'speaker',
     label: 'Deep Bass',
-    name:  'SPEAKER',
+    name:  'EARBUDS',
     bg:    tokens.category.speaker.bg,
     text:  tokens.category.speaker.text,
   },

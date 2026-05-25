@@ -44,7 +44,7 @@ export function RecentNews(): JSX.Element {
                   {a.date} by{' '}
                   <span className="font-medium text-fg">{a.author}</span>
                 </p>
-                <h3 className="text-base font-bold text-fg mb-2 group-hover:text-primary transition-colors duration-200">
+                <h3 className="text-base font-sans font-bold text-fg mb-2 group-hover:text-primary transition-colors duration-200">
                   {a.title}
                 </h3>
                 <p className="text-sm text-fg-muted leading-relaxed line-clamp-3">

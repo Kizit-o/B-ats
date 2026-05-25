@@ -15,13 +15,13 @@ export const tokens = {
     footerBg:     '#111111',
   },
   category: {
-    earphone: { bg: '#1a1a1a', text: '#ffffff' },
-    wearable: { bg: '#c8830a', text: '#ffffff' },
-    devices:  { bg: '#c0392b', text: '#ffffff' },
-    gaming:   { bg: '#3a3a3a', text: '#ffffff' },
-    oculus:   { bg: '#1e6b1e', text: '#ffffff' },
-    speaker:  { bg: '#1a4d8f', text: '#ffffff' },
-  },
+  earphone: { bg: '#a5f3fc', text: '#0f172a' }, // Light Blue (Cyan-100) with dark text for readability
+  wearable: { bg: '#111827', text: '#ffffff' }, // Smartwatch: Same light blue color with dark text
+  devices:  { bg: '#a5f3fc', text: '#0f172a' }, // Laptop: Rich Purple (Violet-500)
+  gaming:   { bg: '#111827', text: '#ffffff' }, // Console: Sleek Dark Grey (Gray-700)
+  oculus:   { bg: '#a5f3fc', text: '#0f172a' }, // VR: Solid Matte Black (Gray-900)
+  speaker:  { bg: '#111827', text: '#ffffff' }, // JBL: Vibrant Neon Coral/Orange 
+},
   banner: {
     summer: { bg: '#b71c1c' },
     happy:  { bg: '#1b5e20' },

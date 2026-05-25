@@ -84,7 +84,7 @@ export function HeroSection() {
         style={{ fontSize: 'clamp(90px, 15vw, 210px)' }}
         aria-hidden="true"
       >
-        DEADBLOWN
+        DOLBYATMOS
       </span>
       <span
         className="absolute right-[-1%] top-1/3 font-sans font-black text-fg opacity-[0.12] select-none leading-none pointer-events-none whitespace-nowrap z-0"
@@ -98,7 +98,7 @@ export function HeroSection() {
         style={{ fontSize: 'clamp(90px, 15vw, 210px)' }}
         aria-hidden="true"
       >
-        BLOWZONE
+        DEEPBASS
       </span>
 
       {/* ── Content grid ─────────────────────────────────────── */}
@@ -115,7 +115,7 @@ export function HeroSection() {
 
           <h1
             className={`font-bold text-fg leading-none mb-4 tracking-tight ${anim}`}
-            style={{ fontSize: 'clamp(4.5rem, 9vw, 8rem)', transitionDelay: '120ms' }}
+            style={{ fontSize: 'clamp(5.5rem, 10vw, 9rem)', transitionDelay: '120ms' }}
           >
             Wireless
           </h1>

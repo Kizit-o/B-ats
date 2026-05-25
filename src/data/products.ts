@@ -1,65 +1,81 @@
 import type { Product } from '../types';
 
+/*
+  Each image path maps to a file in public/assets/images/products/.
+  Vite serves the public/ folder at root, so the path in code
+  is /assets/images/products/{filename} — no "public/" prefix.
+
+  Image → product content matching:
+    airpods.jpg   → wireless earbuds   → AirPods Pro
+    beats.jpg     → over-ear cans      → Beats Studio Pro
+    console.jpg   → gaming console     → PlayStation 5
+    elitebook.jpg → laptop/device      → HP EliteBook 840 G9
+    jbl.jpg       → portable speaker   → JBL Xtreme 3
+    JBL2.jpg      → compact speaker    → JBL Charge 5
+    smartwatch.jpg→ wrist wearable     → Samsung Galaxy Watch 6
+    VR.jpg        → headset            → Meta Quest 3
+*/
+
 export const products: Product[] = [
   {
     id:       'p1',
-    name:     'Beats Pro Studio',
-    price:    995,
-    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Beats+Pro',
-    category: 'headphones',
+    name:     'AirPods Pro 2nd Gen',
+    price:    249,
+    image:    '/assets/images/products/airpod.jpg',
+    category: 'earphones',
   },
   {
     id:       'p2',
-    name:     'Rocky Mountain ANC',
-    price:    8250,
-    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Rocky+Mountain',
+    name:     'Beats Studio Pro',
+    price:    349,
+    image:    '/assets/images/products/beats.jpg',
     category: 'headphones',
   },
   {
     id:       'p3',
-    name:     'Game Console Controller',
-    price:    8250,
-    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Controller',
+    name:     'PlayStation 5 Console',
+    price:    499,
+    image:    '/assets/images/products/console2.jpg',
     category: 'gaming',
   },
   {
     id:        'p4',
-    name:      'White Elitebook Tablet 80',
-    price:     7950,
-    salePrice: 9950,
-    image:     'https://placehold.co/280x260/f8f8f8/333333?text=Tablet+80',
+    name:      'HP EliteBook 840 G9',
+    price:     1299,
+    salePrice: 1599,
+    image:     '/assets/images/products/macbook.jpg',
     category:  'devices',
     isSale:    true,
   },
   {
     id:       'p5',
-    name:     'Dare Wear C7',
-    price:    499,
-    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Dare+Wear',
-    category: 'wearables',
+    name:     'JBL Xtreme 3',
+    price:    329,
+    image:    '/assets/images/products/jbl.jpg',
+    category: 'speakers',
   },
   {
     id:       'p6',
-    name:     'Wireless Audio Multiroom 380',
-    price:    8250,
-    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Multiroom+380',
+    name:     'JBL Charge 5',
+    price:    179,
+    image:    '/assets/images/products/JBL2.jpg',
     category: 'speakers',
   },
   {
     id:        'p7',
-    name:      'Beats Elite Wireless',
-    price:     7450,
-    salePrice: 9950,
-    image:     'https://placehold.co/280x260/f8f8f8/333333?text=Beats+Elite',
-    category:  'headphones',
+    name:      'Samsung Galaxy Watch 6',
+    price:     279,
+    salePrice: 349,
+    image:     '/assets/images/products/smartwatch.jpg',
+    category:  'wearables',
     isSale:    true,
   },
   {
     id:       'p8',
-    name:     'Smartwatch 2GTi WH',
+    name:     'Meta Quest 3 VR',
     price:    499,
-    image:    'https://placehold.co/280x260/f8f8f8/333333?text=Smartwatch+2GTi',
-    category: 'wearables',
+    image:    '/assets/images/products/VR.jpg',
+    category: 'gaming',
     isNew:    true,
   },
 ];
