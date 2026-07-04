@@ -9,8 +9,8 @@ export function RecentNews(): JSX.Element {
     <section id="blog" className="py-16 lg:py-20 bg-surface" aria-label="Recent news">
       <div className="page-x">
         <SectionTitle
-          title="Recent News"
-          subtitle="Lorem — There are many variations passages"
+          title="Tech Articles"
+          subtitle="Latest and greatest tech articles"
         />
 
         <div
