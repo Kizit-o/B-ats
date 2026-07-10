@@ -1,4 +1,5 @@
 import type { Product } from '../types';
+import { assetUrl } from '../utils/asset';
 
 /*
   Each image path maps to a file in public/assets/images/products/.
@@ -21,21 +22,21 @@ export const products: Product[] = [
     id:       'p1',
     name:     'AirPods Pro 2nd Gen',
     price:    249,
-    image:    '/assets/images/products/airpod.jpg',
+    image:    assetUrl('assets/images/products/airpod.jpg'),
     category: 'earphones',
   },
   {
     id:       'p2',
     name:     'Beats Studio Pro',
     price:    349,
-    image:    '/assets/images/products/beats.jpg',
+    image:    assetUrl('assets/images/products/beats.jpg'),
     category: 'headphones',
   },
   {
     id:       'p3',
     name:     'PlayStation 5 Console',
     price:    499,
-    image:    '/assets/images/products/console2.jpg',
+    image:    assetUrl('assets/images/products/console2.jpg'),
     category: 'gaming',
   },
   {
@@ -43,7 +44,7 @@ export const products: Product[] = [
     name:      'HP EliteBook 840 G9',
     price:     1299,
     salePrice: 1599,
-    image:     '/assets/images/products/macbook.jpg',
+    image:     assetUrl('assets/images/products/macbook.jpg'),
     category:  'devices',
     isSale:    true,
   },
@@ -51,14 +52,14 @@ export const products: Product[] = [
     id:       'p5',
     name:     'JBL Xtreme 3',
     price:    329,
-    image:    '/assets/images/products/jbl.jpg',
+    image:    assetUrl('assets/images/products/jbl.jpg'),
     category: 'speakers',
   },
   {
     id:       'p6',
     name:     'JBL Charge 5',
     price:    179,
-    image:    '/assets/images/products/JBL2.jpg',
+    image:    assetUrl('assets/images/products/JBL2.jpg'),
     category: 'speakers',
   },
   {
@@ -66,7 +67,7 @@ export const products: Product[] = [
     name:      'Samsung Galaxy Watch 6',
     price:     279,
     salePrice: 349,
-    image:     '/assets/images/products/smartwatch.jpg',
+    image:     assetUrl('assets/images/products/smartwatch.jpg'),
     category:  'wearables',
     isSale:    true,
   },
@@ -74,7 +75,7 @@ export const products: Product[] = [
     id:       'p8',
     name:     'Meta Quest 3 VR',
     price:    499,
-    image:    '/assets/images/products/VR.jpg',
+    image:    assetUrl('assets/images/products/VR.jpg'),
     category: 'gaming',
     isNew:    true,
   },

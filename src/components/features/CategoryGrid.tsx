@@ -2,18 +2,19 @@ import { useState } from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { categories }      from '../../data/categories';
 import type { Category }    from '../../types';
+import { assetUrl }         from '../../utils/asset';
 
 // 1. Updated image mapping with your asset paths
 const IMAGES: Record<string, string> = {
-  earphone: '/assets/images/categories/Headphones.png',
-  wearable: '/assets/images/categories/Watches.png',
-  devices:  '/assets/images/categories/Laptop.png',
-  gaming:   '/assets/images/categories/Console.png',
-  oculus:   '/assets/images/categories/VR.png',
-  speaker:  '/assets/images/categories/JBL.png',
+  earphone: assetUrl('assets/images/categories/Headphones.png'),
+  wearable: assetUrl('assets/images/categories/Watches.png'),
+  devices:  assetUrl('assets/images/categories/Laptop.png'),
+  gaming:   assetUrl('assets/images/categories/Console.png'),
+  oculus:   assetUrl('assets/images/categories/VR.png'),
+  speaker:  assetUrl('assets/images/categories/JBL.png'),
 };
 
-const FALLBACK_IMAGE = '/assets/images/banners/Hero-img.png';
+const FALLBACK_IMAGE = assetUrl('assets/images/banners/Hero-img.png');
 
 /* ── Browse button — local hover state ─────── */
 function BrowseButton({ text, bg }: { text: string; bg: string }): JSX.Element {

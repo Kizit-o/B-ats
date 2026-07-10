@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-   "homepage": "https://github.com/Kizit-o/B-ats",
+  "homepage": "https://Kizit-o.github.io/B-ats",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
