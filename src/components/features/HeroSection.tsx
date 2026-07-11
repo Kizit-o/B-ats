@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button }              from '../ui/Button';
-import { assetUrl }            from '../../utils/asset';
+import heroImage               from '../../../public/assets/images/banners/Hero-img.png';
 
 /* ── Typewriter ───────────────────────────────────────────────────
    Types characters one-by-one after `startDelay` ms elapses.
@@ -146,7 +146,7 @@ export function HeroSection() {
             • cursor-pointer     — signals interactivity
           */}
           <img
-            src={assetUrl('assets/images/banners/Hero-img.png')}
+            src={heroImage}
             alt="Be@ts Pro Wireless Headphone"
             className={`w-full max-w-md lg:max-w-xl max-h-[440px] lg:max-h-[580px]
               object-contain drop-shadow-2xl cursor-pointer

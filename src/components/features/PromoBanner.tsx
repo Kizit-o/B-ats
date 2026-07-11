@@ -1,7 +1,7 @@
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import type { PromoBannerData } from '../../types';
 import { Button } from '../ui/Button';
-import { assetUrl } from '../../utils/asset';
+import bannerImage from '../../../public/assets/images/banners/Banner.png';
 
 export function PromoBanner({
   bg, displayText, discount, dateRange,
@@ -38,7 +38,7 @@ export function PromoBanner({
           }}
         >
           <img
-            src={assetUrl('assets/images/banners/Banner.png')}
+            src={bannerImage}
             alt={imageAlt}
             width={400}
             height={360}

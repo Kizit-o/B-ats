@@ -2,19 +2,25 @@ import { useState } from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { categories }      from '../../data/categories';
 import type { Category }    from '../../types';
-import { assetUrl }         from '../../utils/asset';
+import headphonesImage      from '../../../public/assets/images/categories/Headphones.png';
+import watchesImage         from '../../../public/assets/images/categories/Watches.png';
+import laptopImage          from '../../../public/assets/images/categories/Laptop.png';
+import consoleImage         from '../../../public/assets/images/categories/Console.png';
+import vrImage              from '../../../public/assets/images/categories/VR.png';
+import jblImage             from '../../../public/assets/images/categories/JBL.png';
+import heroFallbackImage    from '../../../public/assets/images/banners/Hero-img.png';
 
 // 1. Updated image mapping with your asset paths
 const IMAGES: Record<string, string> = {
-  earphone: assetUrl('assets/images/categories/Headphones.png'),
-  wearable: assetUrl('assets/images/categories/Watches.png'),
-  devices:  assetUrl('assets/images/categories/Laptop.png'),
-  gaming:   assetUrl('assets/images/categories/Console.png'),
-  oculus:   assetUrl('assets/images/categories/VR.png'),
-  speaker:  assetUrl('assets/images/categories/JBL.png'),
+  earphone: headphonesImage,
+  wearable: watchesImage,
+  devices:  laptopImage,
+  gaming:   consoleImage,
+  oculus:   vrImage,
+  speaker:  jblImage,
 };
 
-const FALLBACK_IMAGE = assetUrl('assets/images/banners/Hero-img.png');
+const FALLBACK_IMAGE = heroFallbackImage;
 
 /* ── Browse button — local hover state ─────── */
 function BrowseButton({ text, bg }: { text: string; bg: string }): JSX.Element {
